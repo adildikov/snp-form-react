@@ -20,6 +20,13 @@
 .form_header {
   width: 98%;
   margin: 15px 7px 0 7px;
+  padding: 5px 0 10px 0;
+
+  background-color: rgb(94, 94, 94);
+  color: white;
+
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 .header__title {
@@ -36,4 +43,8 @@
   font-size: 14px;
   text-align: right;
   margin: 10px 10px 0 0;
+}
+
+.form_body {
+  margin-top: 15px;
 }
