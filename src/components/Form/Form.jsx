@@ -1,4 +1,5 @@
 import React from "react";
+import Input from "../Input/Input";
 import "./style.css";
 
 export default function Form() {
@@ -11,7 +12,11 @@ export default function Form() {
         </p>
         <p className="required_fields">* - обязательные поля</p>
       </div>
-      <div className="form_body"></div>
+      <div className="form_body">
+        <Input labelText="Фамилия" id="lastName" type="text" />
+        <Input labelText="Имя" id="firstName" type="text" />
+        <Input labelText="Отчество" id="middleName" type="text" />
+      </div>
     </div>
   );
 }
