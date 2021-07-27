@@ -6,6 +6,7 @@ const initialState = {
   middleName: "",
   study_work: "",
   dateOfBirth: "",
+  email: "",
   other: "",
 };
 

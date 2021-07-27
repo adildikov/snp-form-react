@@ -16,6 +16,9 @@ export default function Form() {
         <Input labelText="Фамилия" id="lastName" type="text" />
         <Input labelText="Имя" id="firstName" type="text" />
         <Input labelText="Отчество" id="middleName" type="text" />
+        <Input labelText="Место учебы/работы" id="study_work" type="text" />
+        <Input labelText="Дата рождения" id="dateOfBirth" type="date" />
+        <Input labelText="Почта" id="email" type="email" />
       </div>
     </div>
   );
