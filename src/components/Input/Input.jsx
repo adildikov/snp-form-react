@@ -18,6 +18,8 @@ export default function Input({ labelText, id, validation, ...attrs }) {
         return validators.studyLength;
       case "nonrequired":
         return validators.nonrequired;
+      case "date":
+        return validators.date;
       default:
         return validators.maxLength;
     }

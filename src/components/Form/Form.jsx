@@ -41,6 +41,7 @@ export default function Form() {
           labelText={fieldsNames.dateOfBirth + "*:"}
           id="dateOfBirth"
           type="date"
+          validation="date"
         />
         <Input
           labelText={fieldsNames.email + "*:"}

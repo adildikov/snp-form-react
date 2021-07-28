@@ -13,4 +13,5 @@ export const errors = {
   email: "Enter valid email address",
   maxLength: "Maximum length is 25 characters",
   studyLength: "Maximum length is 45 characters",
+  date: "Date must be in the past",
 };

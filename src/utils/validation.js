@@ -24,4 +24,8 @@ export const validators = {
     isValid: () => true,
     error: "",
   },
+  date: {
+    isValid: (value) => new Date(value) < Date.now(),
+    error: errors.date,
+  },
 };
