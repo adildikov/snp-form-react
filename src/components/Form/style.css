@@ -8,7 +8,7 @@
 
 .form_wrapper {
   width: 35%;
-  height: 90vh;
+  height: 94vh;
   margin: 30px 0 0 15px;
 
   background-color: rgb(212, 212, 212);
@@ -32,6 +32,7 @@
 .header__title {
   font-size: 26px;
   text-align: center;
+  font-weight: bold;
 }
 
 .header__content {
@@ -42,7 +43,7 @@
 .required_fields {
   font-size: 14px;
   text-align: right;
-  margin: 10px 10px 0 0;
+  margin: 10px 20px 0 0;
 }
 
 .form_body {
