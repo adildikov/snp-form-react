@@ -20,4 +20,8 @@ export const validators = {
     isValid: (value) => value.length < 45,
     error: errors.studyLength,
   },
+  nonrequired: {
+    isValid: () => true,
+    error: "",
+  },
 };

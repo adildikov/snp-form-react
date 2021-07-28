@@ -29,6 +29,7 @@ export default function Form() {
           labelText={fieldsNames.middleName + ":"}
           id="middleName"
           type="text"
+          validation="nonrequired"
         />
         <Input
           labelText={fieldsNames.study_work + "*:"}

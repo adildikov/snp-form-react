@@ -16,12 +16,17 @@ export default function Input({ labelText, id, validation, ...attrs }) {
         return validators.email;
       case "studyLength":
         return validators.studyLength;
+      case "nonrequired":
+        return validators.nonrequired;
       default:
         return validators.maxLength;
     }
   };
 
-  const validator = text ? validatorChoose() : validators.required;
+  const validator =
+    text || validation === "nonrequired"
+      ? validatorChoose()
+      : validators.required;
 
   const submitBlurHandler = () => {
     if (!validator.isValid(text)) {
