@@ -1,6 +1,5 @@
 import React from "react";
 import { fieldsNames } from "../../utils/mockData";
-import { validators } from "../../utils/validation";
 import Input from "../Input/Input";
 import InputTextField from "../InputTextField/InputTextField";
 import "./style.css";
@@ -20,13 +19,11 @@ export default function Form() {
           labelText={fieldsNames.lastName + "*:"}
           id="lastName"
           type="text"
-          validation={validators.required}
         />
         <Input
           labelText={fieldsNames.firstName + "*:"}
           id="firstName"
           type="text"
-          validation={validators.required}
         />
         <Input
           labelText={fieldsNames.middleName + ":"}
@@ -37,19 +34,18 @@ export default function Form() {
           labelText={fieldsNames.study_work + "*:"}
           id="study_work"
           type="text"
-          validation={validators.required}
+          validation="studyLength"
         />
         <Input
           labelText={fieldsNames.dateOfBirth + "*:"}
           id="dateOfBirth"
           type="date"
-          validation={validators.required}
         />
         <Input
           labelText={fieldsNames.email + "*:"}
           id="email"
           type="email"
-          validation={validators.email}
+          validation="email"
         />
         <InputTextField labelText={fieldsNames.other + ":"} id="other" />
       </div>

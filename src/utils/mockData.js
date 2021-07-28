@@ -11,4 +11,6 @@ export const fieldsNames = {
 export const errors = {
   required: "Required field",
   email: "Enter valid email address",
+  maxLength: "Maximum length is 25 characters",
+  studyLength: "Maximum length is 45 characters",
 };
