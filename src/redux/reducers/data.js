@@ -1,4 +1,4 @@
-import { PUT_DATA } from "../constants";
+import { PUT_DATA, REMOVE_DATA } from "../constants";
 import { load } from "redux-localstorage-simple";
 
 let initialState = load({ namespace: "data" });
@@ -26,6 +26,16 @@ const data = (state = initialState.data, { type, value, field }) => {
       return {
         ...state,
         [field]: value,
+      };
+    case REMOVE_DATA:
+      return {
+        lastName: "",
+        firstName: "",
+        middleName: "",
+        study_work: "",
+        dateOfBirth: "",
+        email: "",
+        other: "",
       };
     default:
       return state;

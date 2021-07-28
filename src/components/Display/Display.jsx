@@ -1,9 +1,14 @@
 import React from "react";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import { fieldsNames } from "../../mockData";
+import { removeData } from "../../redux/actions/actionCreator";
 import "./style.css";
 
 function Display({ data }) {
+  const dispatch = useDispatch();
+  const removeHandle = () => {
+    dispatch(removeData());
+  };
   return (
     <div className="display_wrapper">
       <div className="display_header">
@@ -38,6 +43,9 @@ function Display({ data }) {
           <span>{fieldsNames.other}</span>
           <p className="other">{data.other}</p>
         </div>
+        <button onClick={removeHandle} className="clear_btn">
+          Clear All
+        </button>
       </div>
     </div>
   );
