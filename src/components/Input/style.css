@@ -38,3 +38,8 @@
 .input_field:focus {
   outline: none;
 }
+
+.error {
+  color: red;
+  margin-left: 10px;
+}

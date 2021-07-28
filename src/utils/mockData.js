@@ -7,3 +7,8 @@ export const fieldsNames = {
   email: "Email",
   other: "Other information",
 };
+
+export const errors = {
+  required: "Required field",
+  email: "Enter valid email address",
+};

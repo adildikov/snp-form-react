@@ -1,6 +1,6 @@
 import React from "react";
 import { connect, useDispatch } from "react-redux";
-import { fieldsNames } from "../../mockData";
+import { fieldsNames } from "../../utils/mockData";
 import { removeData } from "../../redux/actions/actionCreator";
 import "./style.css";
 
