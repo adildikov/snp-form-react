@@ -1,44 +1,17 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { putData } from "../../redux/actions/actionCreator";
+import React from "react";
 import "./style.css";
-import { validators } from "../../utils/validation";
 
-export default function Input({ labelText, id, validation, ...attrs }) {
-  const dispatch = useDispatch();
-
-  const [error, setError] = useState(false);
-  const [text, setText] = useState("");
-
-  const validatorChoose = () => {
-    switch (validation) {
-      case "email":
-        return validators.email;
-      case "studyLength":
-        return validators.studyLength;
-      case "nonrequired":
-        return validators.nonrequired;
-      case "date":
-        return validators.date;
-      default:
-        return validators.maxLength;
-    }
-  };
-
-  const validator =
-    text || validation === "nonrequired"
-      ? validatorChoose()
-      : validators.required;
-
-  const submitBlurHandler = () => {
-    if (!validator.isValid(text)) {
-      setError(true);
-    } else {
-      setError(false);
-      dispatch(putData(id, text));
-    }
-  };
-
+export default function Input({
+  text,
+  labelText,
+  id,
+  validation,
+  isError,
+  submitBlurHandler,
+  onChangeHandler,
+  errorMessage,
+  ...attrs
+}) {
   return (
     <div className="input">
       <label htmlFor={id} className="input__label">
@@ -50,10 +23,10 @@ export default function Input({ labelText, id, validation, ...attrs }) {
         {...attrs}
         className="input__field"
         value={text}
-        onChange={(e) => setText(e.target.value)}
+        onChange={onChangeHandler}
         onBlur={submitBlurHandler}
       />
-      {error && <p className="error">{validator.error}</p>}
+      {isError && <p className="error">{errorMessage}</p>}
     </div>
   );
 }
