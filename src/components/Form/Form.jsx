@@ -1,6 +1,6 @@
 import React from "react";
+import InputContainer from "../../containers/input";
 import { fieldsNames } from "../../utils/mockData";
-import Input from "../Input/Input";
 import InputTextField from "../InputTextField/InputTextField";
 import "./style.css";
 
@@ -15,35 +15,35 @@ export default function Form() {
         </p>
       </div>
       <div className="form_body">
-        <Input
+        <InputContainer
           labelText={fieldsNames.lastName + "*:"}
           id="lastName"
           type="text"
         />
-        <Input
+        <InputContainer
           labelText={fieldsNames.firstName + "*:"}
           id="firstName"
           type="text"
         />
-        <Input
+        <InputContainer
           labelText={fieldsNames.middleName + ":"}
           id="middleName"
           type="text"
           validation="nonrequired"
         />
-        <Input
+        <InputContainer
           labelText={fieldsNames.study_work + "*:"}
           id="study_work"
           type="text"
           validation="studyLength"
         />
-        <Input
+        <InputContainer
           labelText={fieldsNames.dateOfBirth + "*:"}
           id="dateOfBirth"
           type="date"
           validation="date"
         />
-        <Input
+        <InputContainer
           labelText={fieldsNames.email + "*:"}
           id="email"
           type="email"

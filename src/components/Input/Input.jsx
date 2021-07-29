@@ -10,7 +10,7 @@ export default function Input({
   submitBlurHandler,
   onChangeHandler,
   errorMessage,
-  ...attrs
+  attrs,
 }) {
   return (
     <div className="input">

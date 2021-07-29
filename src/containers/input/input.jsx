@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { putData } from "../../redux/actions/actionCreator";
-import "./style.css";
 import { validators } from "../../utils/validation";
 import Input from "../../components/Input/Input";
 
@@ -45,7 +44,7 @@ export default function InputContainer({
     }
   };
 
-  const onChangeHandler = () => {
+  const onChangeHandler = (e) => {
     setText(e.target.value);
   };
 
@@ -58,6 +57,7 @@ export default function InputContainer({
       submitBlurHandler={submitBlurHandler}
       onChangeHandler={onChangeHandler}
       errorMessage={validator.error}
+      attrs={attrs}
     />
   );
 }
