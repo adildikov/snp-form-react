@@ -1,17 +1,13 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { putData } from "../../redux/actions/actionCreator";
+import React from "react";
 import "./style.css";
 
-export default function InputTextField({ labelText, id }) {
-  const dispatch = useDispatch();
-
-  const [text, setText] = useState("");
-
-  const submitBlurHandler = () => {
-    dispatch(putData(id, text));
-  };
-
+export default function InputTextField({
+  labelText,
+  id,
+  text,
+  submitBlurHandler,
+  setTextHandler,
+}) {
   return (
     <div className="textField">
       <label htmlFor={id} className="textField__label">
@@ -22,7 +18,7 @@ export default function InputTextField({ labelText, id }) {
         id={id}
         className="textField__field"
         value={text}
-        onChange={(e) => setText(e.target.value)}
+        onChange={setTextHandler}
         onBlur={submitBlurHandler}
       />
     </div>

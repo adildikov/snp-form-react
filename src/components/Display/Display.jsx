@@ -1,14 +1,8 @@
 import React from "react";
-import { connect, useDispatch } from "react-redux";
 import { fieldsNames } from "../../utils/mockData";
-import { removeData } from "../../redux/actions/actionCreator";
 import "./style.css";
 
-function Display({ data }) {
-  const dispatch = useDispatch();
-  const removeHandle = () => {
-    dispatch(removeData());
-  };
+export default function Display({ data, removeHandle }) {
   return (
     <div className="display_wrapper">
       <div className="display_header">
@@ -50,7 +44,3 @@ function Display({ data }) {
     </div>
   );
 }
-
-export default connect(({ data }) => ({
-  data,
-}))(Display);

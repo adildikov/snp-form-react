@@ -1,7 +1,7 @@
 import React from "react";
 import InputContainer from "../../containers/input";
+import InputTextFieldContainer from "../../containers/textField/textField";
 import { fieldsNames } from "../../utils/mockData";
-import InputTextField from "../InputTextField/InputTextField";
 import "./style.css";
 
 export default function Form() {
@@ -49,7 +49,10 @@ export default function Form() {
           type="email"
           validation="email"
         />
-        <InputTextField labelText={fieldsNames.other + ":"} id="other" />
+        <InputTextFieldContainer
+          labelText={fieldsNames.other + ":"}
+          id="other"
+        />
       </div>
       <p className="required_fields">* - required fields</p>
     </div>

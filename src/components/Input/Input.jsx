@@ -5,7 +5,6 @@ export default function Input({
   text,
   labelText,
   id,
-  validation,
   isError,
   submitBlurHandler,
   onChangeHandler,
