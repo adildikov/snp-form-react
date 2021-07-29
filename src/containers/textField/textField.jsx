@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import InputTextField from "../../components/InputTextField";
 import { putData } from "../../redux/actions/actionCreator";
 
-export default function InputTextFieldContainer({ labelText, id }) {
+export default React.memo(function InputTextFieldContainer({ labelText, id }) {
   const dispatch = useDispatch();
 
   const [text, setText] = useState("");
@@ -25,4 +25,4 @@ export default function InputTextFieldContainer({ labelText, id }) {
       setTextHandler={setTextHandler}
     />
   );
-}
+});

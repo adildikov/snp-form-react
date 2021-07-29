@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-export default function Input({
+export default React.memo(function Input({
   text,
   labelText,
   id,
@@ -28,4 +28,4 @@ export default function Input({
       {isError && <p className="error">{errorMessage}</p>}
     </div>
   );
-}
+});

@@ -2,7 +2,7 @@ import React from "react";
 import { fieldsNames } from "../../utils/mockData";
 import "./style.css";
 
-export default function Display({ data, removeHandle }) {
+export default React.memo(function Display({ data, removeHandle }) {
   return (
     <div className="display_wrapper">
       <div className="display_header">
@@ -43,4 +43,4 @@ export default function Display({ data, removeHandle }) {
       </div>
     </div>
   );
-}
+});

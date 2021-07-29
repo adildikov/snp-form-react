@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-export default function InputTextField({
+export default React.memo(function InputTextField({
   labelText,
   id,
   text,
@@ -23,4 +23,4 @@ export default function InputTextField({
       />
     </div>
   );
-}
+});

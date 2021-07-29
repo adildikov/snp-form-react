@@ -1,9 +1,11 @@
 import React from "react";
-import { connect, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { removeData } from "../../redux/actions/actionCreator";
 import Display from "../../components/Display";
 
-function DisplayContainer({ data }) {
+export default function DisplayContainer() {
+  const data = useSelector((state) => state.data);
+
   const dispatch = useDispatch();
   const removeHandle = () => {
     dispatch(removeData());
@@ -11,7 +13,3 @@ function DisplayContainer({ data }) {
 
   return <Display data={data} removeHandle={removeHandle} />;
 }
-
-export default connect(({ data }) => ({
-  data,
-}))(DisplayContainer);

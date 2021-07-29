@@ -4,7 +4,7 @@ import { putData } from "../../redux/actions/actionCreator";
 import { validators } from "../../utils/validation";
 import Input from "../../components/Input/Input";
 
-export default function InputContainer({
+export default React.memo(function InputContainer({
   labelText,
   id,
   validation,
@@ -60,4 +60,4 @@ export default function InputContainer({
       attrs={attrs}
     />
   );
-}
+});
