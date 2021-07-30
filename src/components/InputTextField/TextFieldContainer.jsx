@@ -9,11 +9,11 @@ export default React.memo(function InputTextFieldContainer({ labelText, id }) {
 
   const [text, setText] = useState("");
 
-  const submitBlurHandler = useCallback(() => {
+  const handleBlur = useCallback(() => {
     dispatch(putData(id, text));
   }, [dispatch, id, text]);
 
-  const setTextHandler = (e) => {
+  const handlerChangeText = (e) => {
     setText(e.target.value);
   };
 
@@ -22,8 +22,8 @@ export default React.memo(function InputTextFieldContainer({ labelText, id }) {
       labelText={labelText}
       id={id}
       text={text}
-      submitBlurHandler={submitBlurHandler}
-      setTextHandler={setTextHandler}
+      onBlur={handleBlur}
+      onChangeText={handlerChangeText}
     />
   );
 });

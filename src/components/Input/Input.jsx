@@ -6,8 +6,8 @@ export default React.memo(function Input({
   labelText,
   id,
   isError,
-  submitBlurHandler,
-  onChangeHandler,
+  onBlur,
+  onChangeText,
   errorMessage,
   attrs,
 }) {
@@ -22,8 +22,8 @@ export default React.memo(function Input({
         {...attrs}
         className="input__field"
         value={text}
-        onChange={onChangeHandler}
-        onBlur={submitBlurHandler}
+        onChange={onChangeText}
+        onBlur={onBlur}
       />
       {isError && <p className="error">{errorMessage}</p>}
     </div>

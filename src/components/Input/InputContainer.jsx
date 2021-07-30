@@ -37,7 +37,7 @@ export default React.memo(function InputContainer({
       ? validatorChoose
       : validators.required;
 
-  const submitBlurHandler = useCallback(() => {
+  const handlerBlur = useCallback(() => {
     if (!validator.isValid(text)) {
       setError(true);
     } else {
@@ -46,7 +46,7 @@ export default React.memo(function InputContainer({
     }
   }, [dispatch, validator, id, text]);
 
-  const onChangeHandler = (e) => {
+  const handlerChangeText = (e) => {
     setText(e.target.value);
   };
 
@@ -56,8 +56,8 @@ export default React.memo(function InputContainer({
       id={id}
       labelText={labelText}
       isError={isError}
-      submitBlurHandler={submitBlurHandler}
-      onChangeHandler={onChangeHandler}
+      onBlur={handlerBlur}
+      onChangeText={handlerChangeText}
       errorMessage={validator.error}
       attrs={attrs}
     />

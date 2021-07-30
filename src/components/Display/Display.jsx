@@ -2,7 +2,7 @@ import React from "react";
 import { fieldsNames } from "../../utils/mockData";
 import "./style.css";
 
-export default React.memo(function Display({ data, removeHandle }) {
+export default React.memo(function Display({ data, onClickRemoveData }) {
   return (
     <div className="display_wrapper">
       <div className="display_header">
@@ -37,7 +37,7 @@ export default React.memo(function Display({ data, removeHandle }) {
           <span>{fieldsNames.other}</span>
           <p className="other">{data.other}</p>
         </div>
-        <button onClick={removeHandle} className="clear_btn">
+        <button onClick={onClickRemoveData} className="clear_btn">
           Clear All
         </button>
       </div>

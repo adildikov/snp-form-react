@@ -9,9 +9,9 @@ export default function DisplayContainer() {
 
   const dispatch = useDispatch();
 
-  const removeHandle = useCallback(() => {
+  const handleClickRemoveData = useCallback(() => {
     dispatch(removeData());
   }, [dispatch]);
 
-  return <Display data={data} removeHandle={removeHandle} />;
+  return <Display data={data} onClickRemoveData={handleClickRemoveData} />;
 }

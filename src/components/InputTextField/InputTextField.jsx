@@ -5,8 +5,8 @@ export default React.memo(function InputTextField({
   labelText,
   id,
   text,
-  submitBlurHandler,
-  setTextHandler,
+  onBlur,
+  onChangeText,
 }) {
   return (
     <div className="textField">
@@ -18,8 +18,8 @@ export default React.memo(function InputTextField({
         id={id}
         className="textField__field"
         value={text}
-        onChange={setTextHandler}
-        onBlur={submitBlurHandler}
+        onChange={onChangeText}
+        onBlur={onBlur}
       />
     </div>
   );
