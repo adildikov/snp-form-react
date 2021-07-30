@@ -1,5 +1,5 @@
 import React from "react";
-import DisplayContainer from "../../containers/display";
+import DisplayContainer from "../Display/DisplayContainer";
 import Form from "../Form/Form";
 import "./style.css";
 

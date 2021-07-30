@@ -1,7 +1,7 @@
 import React from "react";
-import InputContainer from "../../containers/input";
-import InputTextFieldContainer from "../../containers/textField/textField";
 import { fieldsNames } from "../../utils/mockData";
+import InputContainer from "../Input/InputContainer";
+import InputTextFieldContainer from "../InputTextField/TextFieldContainer";
 import "./style.css";
 
 export default function Form() {

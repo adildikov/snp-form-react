@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { putData } from "../../redux/actions/actionCreator";
 import { validators } from "../../utils/validation";
-import Input from "../../components/Input/Input";
+import Input from "./Input";
 import { useMemo } from "react";
 import { useCallback } from "react";
 
