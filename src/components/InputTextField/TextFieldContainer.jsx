@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import InputTextField from ".";
-import { putData } from "../../redux/actions/actionCreator";
+import { putData } from "../../redux/data/actions";
 
 export default React.memo(function InputTextFieldContainer({ labelText, id }) {
   const dispatch = useDispatch();

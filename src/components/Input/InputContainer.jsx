@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { putData } from "../../redux/actions/actionCreator";
 import { validators } from "../../utils/validation";
 import Input from "./Input";
 import { useMemo } from "react";
 import { useCallback } from "react";
+import { putData } from "../../redux/data/actions";
 
 export default React.memo(function InputContainer({
   labelText,

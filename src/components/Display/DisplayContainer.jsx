@@ -1,8 +1,8 @@
 import React, { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeData } from "../../redux/actions/actionCreator";
 import Display from ".";
-import { getData } from "../../redux/selectors";
+import { removeData } from "../../redux/data/actions";
+import { getData } from "../../redux/data/selectors";
 
 export default function DisplayContainer() {
   const data = useSelector(getData);
